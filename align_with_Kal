@@ -1,8 +1,8 @@
-# Alignment using Kallisto
+#Alignment using Kallisto
 		
 ## ******* ALIGN THE SAMPLE FILE ON INDEX FILE ********* ##
-### Since the reading can either be single-end reads or paired-end reads the further steps will be done according to them being their single end or paired-end 
-## for single-end reads; for doing this we will call the function quant and not ###index like before
+###Since the reading can either be single-end reads or paired-end reads, the further steps will be done according to them being their single-end or paired-end 
+##For single-end reads; for doing this, we will call the function quant and not #index# like before
 
 kallisto quant\
 -i kallisto_Homo_sapiens.GRCh38.cdna_index.index\
@@ -11,14 +11,15 @@ kallisto quant\
 --single -l 250 -s 30\
 SRR######.fastq.qz
 
-##### here we will take -l (length) as standard they are usually the length they take #while sequencing we do not know here, and -s (standard deviation), 
-we will take ###default known values for both of it
+#Here, we will take -l (length) as standard; they are usually the length they take #while sequencing we do not know here, and -s (standard deviation), 
+#we will take #default# known values for both of it
 
-## Use this code for the paired-end read file:
+##Use this code for the paired-end read file:
+
 kallisto quant\
 -i kallisto_Homo_sapiens.GRCh38.cdna_index.index\
 -o output_folder\
 -t 8\
 SRR####_1.fasta.qz\
 SRR####_2.fasta.qz\
-&>output_folder.log      # this last line is not important to mention
+&>output_folder.log      # This last line is not important to mention
