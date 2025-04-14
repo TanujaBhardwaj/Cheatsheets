@@ -1,0 +1,10 @@
+## Using fastp for trimming the fastq files
+
+#for paired-end reads
+fastp -i SRR####_1.fastq -I SRR#####_2.fastq -o SRR_###_1.fastq -O SRR_###_2.fastq --detect_adapter_for_pe -c
+
+# For single end read files
+fastp -i SRR####_1.fastq -I SRR#####_2.fastq -o SRR_###_1.fastq -O SRR_###_2.fastq
+
+#Kallisto
+kallisto quant -i HS_cdna_index_GRCh38_15_02_2024.index -o O4_i_D60_1 SRR_###_1.fastq SRR_###_2.fastq &>O##_#_##_1.log
